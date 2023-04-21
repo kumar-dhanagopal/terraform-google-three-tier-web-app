@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-output "endpoint" {
+output "app_frontend" {
   value       = google_cloud_run_service.fe.status[0].url
   description = "The url of the front end which we want to surface to the user"
 }
@@ -23,7 +23,7 @@ output "sqlservername" {
   description = "The name of the database that we randomly generated."
 }
 
-output "neos_toc_url" {
+output "post_deployment_tutorials" {
   value       = "https://console.cloud.google.com/products/solutions/deployments?walkthrough_id=panels--sic--three-tier-web-app&project=${var.project_id}"
   description = "The URL to launch the in-console tutorial for the Three Tier App solution"
 }
